@@ -1,9 +1,10 @@
+import { ICategory } from './category.interface'
+
 export interface IProduct {
-  id?: number
+  id?: string
   name: string
   description: string
+  image_url: string
   price: number
-  stock: number
-  created_at?: Date
-  updated_at?: Date
+  categories?: ICategory[]
 }

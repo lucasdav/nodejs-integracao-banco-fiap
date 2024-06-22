@@ -1,5 +1,5 @@
 import { FastifyReply, FastifyRequest } from 'fastify'
-import { env } from 'process'
+import { env } from '@/env'
 import { ZodError } from 'zod'
 
 interface ErrorHandlerMap {
