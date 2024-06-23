@@ -1,6 +1,6 @@
 import { IProductRepository } from '@/repositories/product.repository.interface'
 
-export class findAllProductsUseCase {
+export class FindAllProductsUseCase {
   constructor(private productRepository: IProductRepository) {
     this.productRepository = productRepository
   }

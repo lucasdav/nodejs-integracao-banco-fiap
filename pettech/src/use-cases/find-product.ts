@@ -1,6 +1,6 @@
 import { IProductRepository } from '@/repositories/product.repository.interface'
 
-export class findProductUseCase {
+export class FindProductUseCase {
   constructor(private productRepository: IProductRepository) {}
 
   async handler(id: string) {
