@@ -10,7 +10,7 @@ export async function deleteProduct(
     id: z.coerce.string(),
   })
 
-  const { id } = registerParamsSchema.parse(request.query)
+  const { id } = registerParamsSchema.parse(request.params)
 
   const deleteProductUseCase = makeDeleteProductUseCase()
 

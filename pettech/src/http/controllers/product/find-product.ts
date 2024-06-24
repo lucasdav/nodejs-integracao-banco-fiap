@@ -7,10 +7,10 @@ export async function findProduct(
   reply: FastifyReply,
 ) {
   const registerParamsSchema = z.object({
-    id: z.string(),
+    id: z.coerce.string(),
   })
 
-  const { id } = registerParamsSchema.parse(request.query)
+  const { id } = registerParamsSchema.parse(request.params)
 
   const findProductUseCase = makeFindProductUseCase()
 

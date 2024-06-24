@@ -7,7 +7,7 @@ export async function update(request: FastifyRequest, reply: FastifyReply) {
     id: z.coerce.string(),
   })
 
-  const { id } = registerParamsSchema.parse(request.query)
+  const { id } = registerParamsSchema.parse(request.params)
 
   const registerBodySchema = z.object({
     name: z.string(),
@@ -24,7 +24,8 @@ export async function update(request: FastifyRequest, reply: FastifyReply) {
       .optional(),
   })
 
-  const { name, description, image, price, categories } = registerBodySchema.parse(request.body)
+  const { name, description, image, price, categories } =
+    registerBodySchema.parse(request.body)
 
   const updateProductUseCase = makeUpdateProductUseCase()
 
